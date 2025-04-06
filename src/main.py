@@ -141,9 +141,15 @@ async def main() -> None:
                 except Exception:
                     deal_tag = 'No'
 
-                expiry_date = driver.find_element(By.CSS_SELECTOR, '#expiryDate_feature_div').get_attribute('innerText').strip().split(':')[-1].strip()
+                try:
+                    expiry_date = driver.find_element(By.CSS_SELECTOR, '#expiryDate_feature_div').get_attribute('innerText').strip().split(':')[-1].strip()
+                except Exception:
+                    expiry_date = 'NA'
 
-                seller = driver.find_element(By.CSS_SELECTOR, '#merchantInfoFeature_feature_div a').get_attribute('innerText').strip()
+                try:
+                    seller = driver.find_element(By.CSS_SELECTOR, '#merchantInfoFeature_feature_div a').get_attribute('innerText').strip()
+                except Exception:
+                    seller = 'NA'
                 
                 try:
                     apex_desktop_div = driver.find_element(By.CSS_SELECTOR, '#apex_desktop_newAccordionRow')
