@@ -1,0 +1,13 @@
+{
+	"actorSpecification": 1,
+	"name": "amazon",
+	"title": "Amazon Price Scraper",
+	"description": "",
+	"version": "0.1",
+	"buildTag": "latest",
+	"meta": {
+		"templateId": "python-selenium"
+	},
+	"input": "./input_schema.json",
+	"dockerfile": "./Dockerfile"
+}

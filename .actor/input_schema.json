@@ -1,0 +1,19 @@
+{
+    "title": "Amazon Price Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "URLs",
+            "type": "array",
+            "description": "URLs to scrape",
+            "prefill": [
+                {
+                    "url": "https://amazon.in/"
+                }
+            ],
+            "editor": "requestListSources"
+        }
+    },
+    "required": ["urls"]
+}
